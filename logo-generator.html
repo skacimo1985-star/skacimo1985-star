@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>SIREP Logo Generator</title>
+<style>
+  body { background: #0d1117; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; font-family: Arial, sans-serif; margin: 0; }
+  canvas { border-radius: 50%; box-shadow: 0 0 40px rgba(46,212,122,0.4); }
+  .btn { margin-top: 24px; background: #2ed47a; color: #000; border: none; padding: 14px 36px; font-size: 16px; font-weight: bold; border-radius: 8px; cursor: pointer; letter-spacing: 1px; }
+  .btn:hover { background: #26b862; }
+  p { color: #8b949e; margin-top: 12px; font-size: 13px; }
+</style>
+</head>
+<body>
+<canvas id="logo" width="460" height="460"></canvas>
+<button class="btn" onclick="downloadLogo()">⬇ Télécharger le Logo PNG</button>
+<p>Taille recommandée: 460×460px | Format: PNG</p>
+
+<script>
+const canvas = document.getElementById('logo');
+const ctx = canvas.getContext('2d');
+const W = 460, H = 460, cx = W/2, cy = H/2, R = 230;
+
+// Fond dégradé circulaire – vert forêt à vert foncé
+const bgGrad = ctx.createRadialGradient(cx, cy-40, 30, cx, cy, R);
+bgGrad.addColorStop(0, '#1a4a2e');
+bgGrad.addColorStop(0.6, '#0d2b1a');
+bgGrad.addColorStop(1, '#060f0a');
+ctx.beginPath();
+ctx.arc(cx, cy, R, 0, Math.PI*2);
+ctx.fillStyle = bgGrad;
+ctx.fill();
+
+// Cercle bordure dorée
+ctx.beginPath();
+ctx.arc(cx, cy, R-6, 0, Math.PI*2);
+ctx.strokeStyle = '#c9a84c';
+ctx.lineWidth = 5;
+ctx.stroke();
+
+// Second cercle intérieur doré
+ctx.beginPath();
+ctx.arc(cx, cy, R-18, 0, Math.PI*2);
+ctx.strokeStyle = 'rgba(201,168,76,0.3)';
+ctx.lineWidth = 1.5;
+ctx.stroke();
+
+// Soleil stylisé (haut)
+const sunX = cx, sunY = 130, sunR = 44;
+const sunGrad = ctx.createRadialGradient(sunX, sunY, 5, sunX, sunY, sunR);
+sunGrad.addColorStop(0, '#ffe066');
+sunGrad.addColorStop(0.5, '#f59e0b');
+sunGrad.addColorStop(1, 'rgba(245,158,11,0)');
+ctx.beginPath();
+ctx.arc(sunX, sunY, sunR, 0, Math.PI*2);
+ctx.fillStyle = sunGrad;
+ctx.fill();
+
+// Rayons soleil
+ctx.save();
+ctx.translate(sunX, sunY);
+ctx.strokeStyle = '#f59e0b';
+ctx.lineWidth = 3;
+ctx.lineCap = 'round';
+for(let i=0; i<12; i++){
+  ctx.save();
+  ctx.rotate(i * Math.PI/6);
+  ctx.beginPath();
+  ctx.moveTo(0, sunR+6);
+  ctx.lineTo(0, sunR+18);
+  ctx.stroke();
+  ctx.restore();
+}
+ctx.restore();
+
+// Silhouette palmier gauche
+function drawPalm(x, y, scale, flip){
+  ctx.save();
+  ctx.translate(x, y);
+  if(flip) ctx.scale(-1, 1);
+  ctx.scale(scale, scale);
+  // Tronc
+  ctx.beginPath();
+  ctx.moveTo(0, 0);
+  ctx.quadraticCurveTo(8, -40, 4, -90);
+  ctx.strokeStyle = '#8B6914';
+  ctx.lineWidth = 7;
+  ctx.stroke();
+  // Feuilles
+  const leafColor = '#2d8a4e';
+  ctx.strokeStyle = leafColor;
+  ctx.lineWidth = 4;
+  ctx.lineCap = 'round';
+  const leaves = [[-50,-110,-10,-95],[20,-120,5,-95],[50,-105,-5,-95],[-30,-130,-8,-98],[35,-128,-3,-98]];
+  leaves.forEach(([x1,y1,x2,y2])=>{
+    ctx.beginPath();
+    ctx.moveTo(x2,y2);
+    ctx.quadraticCurveTo((x1+x2)/2, (y1+y2)/2-10, x1, y1);
+    ctx.stroke();
+  });
+  ctx.restore();
+}
+drawPalm(cx-85, cy+165, 1.1, false);
+drawPalm(cx+85, cy+165, 1.1, true);
+
+// Dunes / horizon désert
+ctx.beginPath();
+ctx.moveTo(30, cy+95);
+ctx.quadraticCurveTo(cx-60, cy+55, cx, cy+70);
+ctx.quadraticCurveTo(cx+70, cy+85, W-30, cy+55);
+ctx.lineTo(W-30, cy+200);
+ctx.lineTo(30, cy+200);
+ctx.closePath();
+const duneGrad = ctx.createLinearGradient(0, cy+55, 0, cy+200);
+duneGrad.addColorStop(0, '#c9a84c');
+duneGrad.addColorStop(0.4, '#a0752a');
+duneGrad.addColorStop(1, '#6b4c18');
+ctx.fillStyle = duneGrad;
+ctx.fill();
+
+// Éolienne / turbine stylisée (icône énergie)
+function drawTurbine(x, y){
+  ctx.save();
+  ctx.translate(x, y);
+  // Mât
+  ctx.beginPath();
+  ctx.moveTo(0, 0);
+  ctx.lineTo(0, 55);
+  ctx.strokeStyle = '#e2e8f0';
+  ctx.lineWidth = 4;
+  ctx.stroke();
+  // Pales
+  ctx.fillStyle = '#e2e8f0';
+  for(let i=0; i<3; i++){
+    ctx.save();
+    ctx.rotate(i * 2*Math.PI/3);
+    ctx.beginPath();
+    ctx.ellipse(0, -28, 5, 28, 0, 0, Math.PI*2);
+    ctx.fill();
+    ctx.restore();
+  }
+  // Centre
+  ctx.beginPath();
+  ctx.arc(0, 0, 6, 0, Math.PI*2);
+  ctx.fillStyle = '#c9a84c';
+  ctx.fill();
+  ctx.restore();
+}
+drawTurbine(cx-40, cy+10);
+drawTurbine(cx+55, cy+25);
+
+// Texte SIREP
+ctx.textAlign = 'center';
+ctx.fillStyle = '#f0fdf4';
+ctx.font = 'bold 52px Arial';
+ctx.letterSpacing = '6px';
+ctx.fillText('SIREP', cx, cy-158);
+
+// Sous-titre OASIS NEXUS
+ctx.font = 'bold 17px Arial';
+ctx.fillStyle = '#c9a84c';
+ctx.fillText('OASIS  NEXUS  TECH  DZ', cx, cy+235);
+
+// Ligne décorative sous SIREP
+ctx.beginPath();
+ctx.moveTo(cx-80, cy-148);
+ctx.lineTo(cx+80, cy-148);
+ctx.strokeStyle = '#c9a84c';
+ctx.lineWidth = 1.5;
+ctx.stroke();
+
+// Algérie flag emoji simulé – petit rectangle
+// Cercle lueur solaire en bas
+const glowGrad = ctx.createRadialGradient(cx, cy+180, 10, cx, cy+180, 80);
+glowGrad.addColorStop(0, 'rgba(201,168,76,0.25)');
+glowGrad.addColorStop(1, 'rgba(201,168,76,0)');
+ctx.beginPath();
+ctx.arc(cx, cy+180, 80, 0, Math.PI*2);
+ctx.fillStyle = glowGrad;
+ctx.fill();
+
+// Masque final pour garder cercle
+ctx.globalCompositeOperation = 'destination-in';
+ctx.beginPath();
+ctx.arc(cx, cy, R, 0, Math.PI*2);
+ctx.fillStyle = '#fff';
+ctx.fill();
+ctx.globalCompositeOperation = 'source-over';
+
+function downloadLogo(){
+  const link = document.createElement('a');
+  link.download = 'SIREP-OASIS-NEXUS-logo.png';
+  link.href = canvas.toDataURL('image/png');
+  link.click();
+}
+</script>
+</body>
+</html>
