@@ -4,44 +4,74 @@
 
 ## محروق الراس بلقاسم
 ## MAHROUG ERRAS BELKACEM
-### 🚀 Founder of SIREP OASIS NEXUS TECH DZ
-**Ingénieur en Systèmes Automatisés & Énergies Renouvelables**
 
-[![Profile Views](https://komarev.com/ghpvc/?username=skacimo1985-star&color=green&style=for-the-badge)](https://github.com/skacimo1985-star)
-[![GitHub followers](https://img.shields.io/github/followers/skacimo1985-star?label=Followers&style=for-the-badge&color=green)](https://github.com/skacimo1985-star)
-![Made in Algeria](https://img.shields.io/badge/Made%20in-Algeria%20🇩🇿-green?style=for-the-badge)
+### 🚀 Founder & CEO — SIREP OASIS NEXUS TECH DZ
+**Ingénieur en Systèmes Automatisés & Énergies Renouvelables 🌿🇩🇿**
+
+[![SIREP](https://img.shields.io/badge/SIREP--OASIS%20NEXUS%20TECH%20DZ-2ea44f?style=for-the-badge&logo=sun&logoColor=white)](https://skacimo1985-star.github.io/sirep-amoud/)
+[![License CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg?style=for-the-badge)](https://github.com/skacimo1985-star/sirep-amoud/blob/main/LICENSE)
+[![Made in Algeria](https://img.shields.io/badge/Made%20in-Algeria%20🇩🇿%20🇩🇿-green?style=for-the-badge)]()
+[![INAPI Patent](https://img.shields.io/badge/INAPI-N°%205893%2F2025-orange?style=for-the-badge)]()
+[![Status](https://img.shields.io/badge/Status-Active%20Development-blue?style=for-the-badge)]()
 
 </div>
 
 ---
 
-## 👤 Qui suis-je? | من أنا؟
+## 👤 من أنا؟ | Qui suis-je?
 
-أنا **محروق الراس بلقاسم**، مهندس جزائري متخصص في **الأنظمة المؤتمتة والطاقات المتجددة**. مؤسس مشروع **SIREP OASIS NEXUS TECH DZ**، أعمل على تطوير حلول تكنولوجية مستدامة للزراعة الصحراوية والطاقة في الجزائر.
+أنا **محروق الراس بلقاسم**، مهندس جزائري متخصص في **الأنظمة المؤتمتة والطاقات المتجددة**، مؤسس مشروع **SIREP OASIS NEXUS TECH DZ**. أعمل على تطوير حلول تكنولوجية مستدامة للزراعة الصحراوية وإدارة الطاقة والمياه في الجزائر.
 
-Je suis **MAHROUG ERRAS BELKACEM**, ingénieur algérien spécialisé dans les **systèmes automatisés** et les **énergies renouvelables**. Fondateur de **SIREP OASIS NEXUS TECH DZ**, je développe des solutions technologiques innovantes pour l'agriculture saharienne et la gestion intelligente de l'énergie.
+Ingénieur algérien spécialisé en **automatisme** et **énergies renouvelables**, fondateur de **SIREP OASIS NEXUS TECH DZ**. Je développe des solutions innovantes pour l'agriculture saharienne, la gestion de l'eau et de l'énergie.
 
 ---
 
 ## 🛠️ Expertise & Technologies
-- **☀️ Énergie Solaire (CSP & PV)** – Conception et optimisation.
-- **⚡ Automatisme & SCADA** – Supervision industrielle (Sonelgaz).
-- **💧 Irrigation Intelligente** – Solutions IoT pour les oasis.
-- **🏗️ Modélisation 3D** – SolidWorks, Blender pour infrastructures.
-- **💻 Développement** – Rust, HTML/CSS/JS, Gitea Actions.
+
+| Domaine | Technologie |
+|---|---|
+| ☀️ Énergie Solaire (CSP & PV) | Conception & optimisation de centrales |
+| ⚡ Automatisme & SCADA | Supervision industrielle — Sonelgaz |
+| 💧 IoT Irrigation | Systèmes intelligents pour oasis sahariennes |
+| 🏗️ Modélisation 3D | SolidWorks, Blender — Infrastructures |
+| 💻 Développement | Rust, HTML/CSS/JS, GitHub Actions |
 
 ---
 
-## 📈 Projets Phares | Main Projects
-- **[SIREP OASIS NEXUS](https://skacimo1985-star.github.io/sirep-amoud/)** : Ma vision d'une oasis intelligente et durable.
-- **Desert Tech Solutions** : Innover pour la souveraineté alimentaire et énergétique au Sud.
+## 📈 Projets Phares | المشاريع الرئيسية
+
+| المشروع | الوصف | الرابط |
+|---|---|---|
+| **SIREP ATLAS IoT/SCADA** | منصة مراقبة ذكية SaaS + نظام تنبيهات | [🔗 Live](https://skacimo1985-star.github.io/sirep-amoud/) |
+| **CSP 70KW SIREP ATLAS** | محطة طاقة شمسية مركزة للواحات الصحراوية | 🔬 In Progress |
+| **WEFEH** | نظام IoT/SCADA لإدارة المياه الذكية | 🔬 In Progress |
 
 ---
 
-## 📬 Contact
-- 📧 Email: **skacimo1985@gmail.com**
-- 🌍 Localisation: **Laghouat, Algérie**
+## ⚖️ الوضع القانوني | Statut Juridique
+
+- 🏢 **Auto-Entrepreneur** — المرسوم التنفيذي 22-23 المؤرخ 18/03/2022
+- 🔬 **براءة اختراع INAPI** — N° 5893/2025 — Brevet N° 142965
+- 🌍 **PCT International** — تغطية 6 دول MENA
+- 🏷️ **NIF**: 18503010006316000380
+- ⬆️ **المسار**: Auto-Entrepreneur → Startup → SARL (2026)
+
+---
+
+## 📬 Contact | التواصل
+
+- 📧 **Email**: [skacimo1985@gmail.com](mailto:skacimo1985@gmail.com)
+- 🌍 **Localisation**: Laghouat — Algérie
+- 🌐 **Site**: [skacimo1985-star.github.io/sirep-amoud](https://skacimo1985-star.github.io/sirep-amoud/)
+
+---
 
 <div align="center">
-  **طوّر بشغف من أجل مستقبل مستدام 🌱**
+
+**© 2025-2026 MAHROUG ERRAS BELKACEM — SIREP OASIS NEXUS TECH DZ**
+
+*طوّر بشغف من أجل مستقبل مستدام في الجزائر 🌱*
+
+*Développé avec passion pour un avenir durable en Algérie 🌱*
+
 </div>
